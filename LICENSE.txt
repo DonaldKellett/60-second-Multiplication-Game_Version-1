@@ -1,0 +1,2 @@
+(c) Donald Leung.  All rights reserved.
+This game is copyrighted by Donald Leung.  Feel free to download it, play the game and perhaps mess with the code (if you know Javascript), but in NO CIRCUMSTANCES should you redistribute, sublicense or sell copies of this game unless you have been given explicit permission to do so.

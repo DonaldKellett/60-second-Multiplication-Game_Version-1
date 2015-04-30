@@ -13,8 +13,8 @@ var numOne,
 	playerAnswer;
 
 function initialize() {
-	numOne = Math.round(25 * Math.random());
-	numTwo = Math.round(25 * Math.random());
+	numOne = Math.round(12 * Math.random());
+	numTwo = Math.round(12 * Math.random());
 	answer = numOne * numTwo;
 	totalQuestions = 0;
 	questionsCorrect = 0;
@@ -58,16 +58,16 @@ function verify() {
 		if (playerAnswer === answer.toString()) {
 			totalQuestions++;
 			questionsCorrect++;
-			numOne = Math.round(25 * Math.random());
-			numTwo = Math.round(25 * Math.random());
+			numOne = Math.round(12 * Math.random());
+			numTwo = Math.round(12 * Math.random());
 			answer = numOne * numTwo;
 			document.getElementById("numOne").innerHTML = numOne;
 			document.getElementById("numTwo").innerHTML = numTwo;
 			document.getElementById("playerAnswer").value = "";
 		} else {
 			totalQuestions++;
-			numOne = Math.round(25 * Math.random());
-			numTwo = Math.round(25 * Math.random());
+			numOne = Math.round(12 * Math.random());
+			numTwo = Math.round(12 * Math.random());
 			answer = numOne * numTwo;
 			document.getElementById("numOne").innerHTML = numOne;
 			document.getElementById("numTwo").innerHTML = numTwo;

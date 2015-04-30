@@ -45,6 +45,13 @@ function disableStartButton() {
 	document.getElementById("startButton").style.display = "none";
 }
 
+//Donald i just made it have the ability to press enter to submit your answer
+window.onkeypress = function(event) {
+   if (event.keyCode == 13) {
+      verify();
+   }
+}
+
 function verify() {
 	if (timeInSeconds >= 0) {
 		playerAnswer = document.getElementById("playerAnswer").value;

@@ -13,8 +13,8 @@ var numOne,
 	playerAnswer;
 
 function initialize() {
-	numOne = Math.round(12 * Math.random());
-	numTwo = Math.round(12 * Math.random());
+	numOne = Math.round(25 * Math.random());
+	numTwo = Math.round(25 * Math.random());
 	answer = numOne * numTwo;
 	totalQuestions = 0;
 	questionsCorrect = 0;
@@ -45,22 +45,29 @@ function disableStartButton() {
 	document.getElementById("startButton").style.display = "none";
 }
 
+//Donald i just made it have the ability to press enter to submit your answer
+window.onkeypress = function(event) {
+   if (event.keyCode == 13) {
+      verify();
+   }
+}
+
 function verify() {
 	if (timeInSeconds >= 0) {
 		playerAnswer = document.getElementById("playerAnswer").value;
 		if (playerAnswer === answer.toString()) {
 			totalQuestions++;
 			questionsCorrect++;
-			numOne = Math.round(12 * Math.random());
-			numTwo = Math.round(12 * Math.random());
+			numOne = Math.round(25 * Math.random());
+			numTwo = Math.round(25 * Math.random());
 			answer = numOne * numTwo;
 			document.getElementById("numOne").innerHTML = numOne;
 			document.getElementById("numTwo").innerHTML = numTwo;
 			document.getElementById("playerAnswer").value = "";
 		} else {
 			totalQuestions++;
-			numOne = Math.round(12 * Math.random());
-			numTwo = Math.round(12 * Math.random());
+			numOne = Math.round(25 * Math.random());
+			numTwo = Math.round(25 * Math.random());
 			answer = numOne * numTwo;
 			document.getElementById("numOne").innerHTML = numOne;
 			document.getElementById("numTwo").innerHTML = numTwo;
